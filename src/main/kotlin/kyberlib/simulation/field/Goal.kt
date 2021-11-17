@@ -4,8 +4,7 @@ import edu.wpi.first.wpilibj.geometry.Pose2d
 import edu.wpi.first.wpilibj.geometry.Translation2d
 import edu.wpi.first.wpilibj.smartdashboard.FieldObject2d
 import edu.wpi.first.wpilibj2.command.Command
-import frc.team6502.robot.commands.drive.AutoDrive
-import frc.team6502.robot.subsystems.Drivetrain
+import edu.wpi.first.wpilibj2.command.InstantCommand
 import kyberlib.math.units.extensions.degrees
 
 /**
@@ -35,9 +34,10 @@ class Goal(val name: String, val position: Translation2d, private val uponArriva
      */
     val command: Command
         get() {
-            val pathCommand = AutoDrive(position)
-            if (uponArrival != null) return pathCommand.andThen(uponArrival).andThen(this::remove, Drivetrain)
-            return pathCommand.andThen(this::remove, Drivetrain)
+//            val pathCommand = AutoDrive(position)
+//            if (uponArrival != null) return pathCommand.andThen(uponArrival).andThen(this::remove, Drivetrain)
+//            return pathCommand.andThen(this::remove, Drivetrain)
+            return InstantCommand()
         }
 
 }

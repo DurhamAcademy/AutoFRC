@@ -28,24 +28,17 @@ object Constants{
 
     // ------ CONTROLS ------ //
     // pids
-    const val DRIVE_P = 1.47
+    const val DRIVE_P = 0.0
     const val DRIVE_I = 0.0
     const val DRIVE_D = 0.0
 
     // feed forwards
-    const val DRIVE_KS = 0.0943
-    const val DRIVE_KV = 4.83
-    const val DRIVE_KA = 0.287
+    const val DRIVE_KS = 0.0
+    const val DRIVE_KV = 0.0
+    const val DRIVE_KA = 0.0
 
     // drivetrain setup
     const val TRACK_WIDTH = 0.657299651
     val WHEEL_RADIUS = (3.25 / 2.0).inches
     const val DRIVE_GEAR_RATIO = 1.0 / 20.0
-
-    const val RAMSETE_BETA = 2.0
-    const val RAMSETE_ZETA = 0.7
-
-    // drive constraints
-    val acceleration = 4.metersPerSecond
-    val velocity = 2.5.metersPerSecond
 }

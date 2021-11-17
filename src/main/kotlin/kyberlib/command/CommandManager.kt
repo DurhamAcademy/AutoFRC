@@ -1,8 +1,6 @@
 package kyberlib.command
 
 import edu.wpi.first.wpilibj2.command.*
-import frc.team6502.robot.commands.general.Strategy
-import frc.team6502.robot.subsystems.Drivetrain
 
 
 /**
@@ -28,8 +26,6 @@ object CommandManager : Command, Debug {
     override fun execute() {
         debugDashboard()
         if (activeCommand == null && queue.isEmpty()) {
-            Strategy.plan()
-            Drivetrain.stop()
             return
         }
         if (activeCommand == null) activeCommand = next()
